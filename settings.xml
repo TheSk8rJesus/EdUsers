@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Settings>
+
+    <Domains>
+        <ldap value="domain.com" />
+        <email value="domain.com" />
+    </Domains>
+
+    <User>
+        <PasswordNeverExpires value="false" />
+        <ChangePasswordAtLogon value="true" />
+        <ProfilePath value="false" />
+        <Password value="%username%" /> <!-- use %username% to set the password as the users uername -->
+    </User>
+
+    <Membership>
+        <level name="Student" />
+        <level name="Teacher" />
+        <level name="TA" />
+        <level name="Support" />
+        <level name="Admin" />
+    </Membership>
+
+    <OUs>
+        <ou level="Student" name="06" path="OU=06,OU=Students,OU=Accounts,OU=School,DC=domain,DC=com" />
+        <ou level="Student" name="07" path="OU=07,OU=Students,OU=Accounts,OU=School,DC=domain,DC=com" />
+        <ou level="Teacher" name="Teacher" path="OU=Teachers,OU=Staff,OU=Accounts,OU=School,DC=domain,DC=com" />
+        <ou level="TA" name="TA" path="OU=TA,OU=Staff,OU=Accounts,OU=School,DC=domain,DC=com" />
+        <ou level="Support" name="Support" path="OU=Support,OU=Staff,OU=Accounts,OU=School,DC=domain,DC=com" />
+        <ou level="Admin" name="Admin" path="OU=Admin,OU=Staff,OU=Accounts,OU=School,DC=domain,DC=com" />
+    </OUs>
+
+    <Groups>
+        <group level="Student" name="students" />
+        <group level="Teacher" name="staff" />
+        <group level="Teacher" name="teachers" />
+        <group level="TA" name="staff" />
+        <group level="TA" name="ta" />
+        <group level="Support" name="support" />
+        <group level="Admin" name="admin" />
+    </Groups>
+
+    <Directories>
+        <directory level="Student" name="06" path="\\file-server\06\%username%"/>
+        <directory level="Student" name="07" path="\\file-server\07\%username%"/>
+        <directory level="Teacher" name="staff" path="\\file-server\staff\%username%"/>
+        <directory level="TA" name="staff" path="\\file-server\staff\%username%"/>
+        <directory level="Admin" name="staff" path="\\file-server\staff\%username%"/>
+        <directory level="Support" name="staff" path="\\file-server\staff\%username%"/>
+    </Directories>
+
+    <Profiles>
+        <profile level="staff" name="staff" path="\\file-server\staff profiles" />
+    </Profiles>
+
+<!-- DO NOT CHANGE SETTINGS PAST HERE UNLESS YOU KNOW WHAT YOU ARE DOING -->
+
+    <Layouts>
+        <layout name="cohort forename surname" value="%cohort%%forename%%surname%"  />
+        <layout name="cohort first initial surname" value="%cohort%%initial%%surname%" />
+        <layout name="cohort first two initials surname" value="%cohort%%initial%%surname%" />
+        <layout name="cohort surname first initial" value="%cohort%%surname%%initial%" />
+        <layout name="cohort surname first two initials" value="%cohort%%surname%%twoinitial%" />
+        <layout name="forename surname cohort" value="%forename%%surname%%cohort%"  />
+        <layout name="first initial surname cohort" value="%initial%%surname%%cohort%" />
+        <layout name="first two initial surname cohort" value="%initial%%surn%cohort%ame%%cohort%" />
+        <layout name="surname first initial cohort" value="%surname%%initial%"  />
+        <layout name="surname first two initial cohort" value="%surname%%twoinitial%%cohort%" />
+        <layout name="forename surname" value="%forename%%surname%" />
+        <layout name="first initial surname" value="%initial%%surname%" />
+        <layout name="first two initial surname" value="%initial%%surname%" />
+        <layout name="surname first initial" value="%surname%%initial%" />
+        <layout name="surname first two initial" value="%surname%%twoinitial%" />
+    </Layouts>
+
+</Settings>
