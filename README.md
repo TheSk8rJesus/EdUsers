@@ -4,11 +4,11 @@ EdUsers is a PowerShell scripts that will allow any network administrator to do 
 At the moment the script only allows for single and multiple user creation but more features will be coming shortly.
 
 ## Contents
-[Requirements](#requirements)
-[Features](#features)
-[Contributors](#contributors)
-[Website](#website)
-[License](#license)
+* [Requirements](#requirements)
+* [Features](#features)
+* [Contributors](#contributors)
+* [Website](#website)
+* [License](#license)
 
 ## Requirements
 The following are required for this script to work fully
