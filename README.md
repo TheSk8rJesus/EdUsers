@@ -6,7 +6,6 @@ At the moment the script only allows for single and multiple user creation but m
 ## Contents
 [Requirements](#requirements)
 [Features](#features)
-[Instructions](#instructions)
 [Contributors](#contributors)
 [Website](#website)
 [License](#license)
